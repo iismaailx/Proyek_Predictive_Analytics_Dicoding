@@ -65,8 +65,7 @@ Data ini berisi 1338 anggota asuransi dari berbagai wilayah dan usia. Data ini m
 Preparasi data dilakukan dengan tahapan sebagai berikut:
 - menghapus data-data outliers 
   Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier adalah data angka BMI dan avg_glucose_level yang berlebihan.
-  ![outlier1](https://user-images.githubusercontent.com/106704301/185286463-05ba9db6-7bd7-4a09-b31f-9e0a627943ed.png)
-![outlier 2](https://user-images.githubusercontent.com/106704301/185286476-f2c216a4-7923-4ed5-abd7-52fdd27f4ddf.png)
+  ![outlier](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/outlier_age_bmi_glukosa.png)
 - melihat kondisi data sampel
 
 ![jenis kelamin](https://user-images.githubusercontent.com/106704301/185286627-ddba4e62-7d94-4bc9-8642-55db5c490a04.png)
