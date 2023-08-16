@@ -3,7 +3,7 @@
 
 ## Domain Proyek
 
-Stroke adalah kondisi medis serius yang terjadi ketika suplai darah ke bagian otak terganggu atau terhenti, menyebabkan sel-sel otak mulai mati dalam waktu singkat. Ini bisa terjadi karena pembuluh darah otak tersumbat oleh gumpalan darah (stroke iskemik) atau pecah (stroke hemoragik).
+Stroke adalah kondisi medis yang serius terjadi ketika aliran darah ke bagian otak terganggu atau terhenti. Hal ini menyebabkan sel-sel otak mengalami kematian dalam periode singkat akibat kekurangan oksigen dan nutrisi. Kondisi ini dapat disebabkan oleh pembuluh darah otak yang tersumbat oleh gumpalan darah, mengakibatkan stroke iskemik, atau oleh pecahnya pembuluh darah yang menyebabkan perdarahan di otak, dikenal sebagai stroke hemoragik. Dalam proyek Machine Learning untuk diagnosis penyakit stroke, kami bertujuan untuk mengembangkan dan meningkatkan kemampuan klasifikasi untuk mengidentifikasi dan memprediksi risiko terjadinya stroke pada individu berdasarkan data medis dan faktor risiko yang relevan.
 
 ## Gejala Stroke:
 Gejala stroke dapat bervariasi tergantung pada bagian otak yang terpengaruh. Beberapa gejala umum yang mungkin terjadi adalah:
