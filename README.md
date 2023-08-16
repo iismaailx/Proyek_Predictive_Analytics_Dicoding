@@ -103,7 +103,7 @@ setelah kita melalukan resample, maka data akan menjadi balance seperti gambar d
 |---	|---	|---	|---	|
 | ACC 	| 0.975336 	| 0.99701 	| 0.908819 	|
 
-Dalam proyek ini, saya akan menggunakan RF karena nilai akurasinya jauh lebih tinggi.
+Dalam proyek ini, baiknya menggunakan RF karena nilai akurasinya jauh lebih tinggi.
 
 ## Evaluation
 - Dibutuhkan optimalisasi lebih lanjut utamanya pada KNN dan SVM agar bisa mendapatkan hasil prediksi yang lebih mendekati hasil aslinya.
