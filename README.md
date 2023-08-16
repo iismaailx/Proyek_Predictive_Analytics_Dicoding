@@ -47,7 +47,7 @@ Tujuan dari proyek ini antara lain:
 
 
 ## Data Understanding
-Data ini berisi 1338 anggota asuransi dari berbagai wilayah dan usia. Data ini memiliki beberapa fitur antara lain:
+Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usia serta dengan kebisaan meroko. Data ini memiliki beberapa fitur antara lain:
 - id : number uniq pasien
 - age : Usia anggota pasien
 - gender : Jenis kelamin pasien
