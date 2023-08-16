@@ -99,7 +99,8 @@ setelah kita melalukan resample, maka data akan menjadi balance seperti gambar d
 ![MSE](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/mse.png)
 - berikut hasil akurasinya : 
 ![accu](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20134228.png)
-Dalam proyek ini, saya akan menggunakan RF karena hasil prediksinya paling mendekati nilai sesungguhnya.
+
+Dalam proyek ini, saya akan menggunakan RF karena nilai akurasinya jauh lebih tinggi.
 
 ## Evaluation
 - Dibutuhkan optimalisasi lebih lanjut utamanya pada KNN dan SVM agar bisa mendapatkan hasil prediksi yang lebih mendekati hasil aslinya.
