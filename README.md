@@ -98,11 +98,9 @@ setelah kita melalukan resample, maka data akan menjadi balance seperti gambar d
 - Pada proyek ini, MSE terkecil dicetak oleh RF, lalu disusul oleh KNN, dan MSE terbesar adalah model SVM.
 ![MSE](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/mse.png)
 - berikut hasil akurasinya : 
-| Model 	| KKN      	| RF      	| SVM      	|   	|
-|-------	|----------	|---------	|----------	|---	|
-| ACC   	| 0.975336 	| 0.99701 	| 0.908819 	|   	|
-|       	|          	|         	|          	|   	|
-|       	|          	|         	|          	|   	|
+| Model 	| KKN      	| RF      	| SVM      	|
+|-------	|----------	|---------	|----------	|
+| ACC   	| 0.975336 	| 0.99701 	| 0.908819 	|
 
 Dalam proyek ini, saya akan menggunakan RF karena nilai akurasinya jauh lebih tinggi.
 
