@@ -5,7 +5,7 @@
 
 Stroke adalah kondisi medis serius yang terjadi ketika suplai darah ke bagian otak terganggu atau terhenti, menyebabkan sel-sel otak mulai mati dalam waktu singkat. Ini bisa terjadi karena pembuluh darah otak tersumbat oleh gumpalan darah (stroke iskemik) atau pecah (stroke hemoragik).
 
-###Gejala Stroke:
+## Gejala Stroke:
 Gejala stroke dapat bervariasi tergantung pada bagian otak yang terpengaruh. Beberapa gejala umum yang mungkin terjadi adalah:
 1. Kelumpuhan atau Kelemahan: Terjadi pada salah satu sisi tubuh, misalnya, lengan atau kaki.
 2. Gangguan Berbicara dan Memahami: Kesulitan berbicara, mencari kata, atau memahami percakapan.
@@ -14,7 +14,7 @@ Gejala stroke dapat bervariasi tergantung pada bagian otak yang terpengaruh. Beb
 5. Pusing, Hilang Keseimbangan: Rasa pusing yang parah atau hilangnya keseimbangan.
 6. Sakit Kepala Parah: Kadang-kadang disertai dengan muntah atau perubahan kesadaran.
 7. Kelumpuhan Wajah: Salah satu sisi wajah mungkin turun atau terasa kesemutan.
-###Faktor Risiko:
+## Faktor Risiko:
 Beberapa faktor yang dapat meningkatkan risiko stroke meliputi:
 1. Hipertensi (Tekanan Darah Tinggi): Tekanan darah tinggi dapat merusak pembuluh darah dan meningkatkan risiko penyumbatan atau pecahnya pembuluh darah otak.
 2. Merokok: Merokok dapat merusak pembuluh darah dan meningkatkan risiko pembentukan gumpalan darah.
@@ -25,12 +25,12 @@ Beberapa faktor yang dapat meningkatkan risiko stroke meliputi:
 
 ## Business Understanding
 Dataset yang digunakan pada proyek ini didapatkan dari link di bawah ini:
-https://www.kaggle.com/datasets/teertha/ushealthinsurancedataset
+[https://www.kaggle.com/datasets/teertha/ushealthinsurancedataset](https://raw.githubusercontent.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/main/healthcare-dataset-stroke-data.csv)
 
 ### Problem Statements
 
 Masalah pada proyek ini antara lain:
-- Apa saja faktor-faktor yang dimiliki anggota yang akan mempengaruhi biaya premi yang dibebankan kepada anggota asuransi?
+- Apa saja faktor-faktor apa saja yang dappat mengakibatkan seseorang terkena stroke?
 - Apa model yang paling akurat pada kasus proyek ini?
 - Berapa error yang akan terjadi pada hasil prediksi model terakurat pada kasus proyek ini?
 
@@ -38,28 +38,33 @@ Masalah pada proyek ini antara lain:
 ### Goals
 
 Tujuan dari proyek ini antara lain:
-- Menentukan faktor-faktor apa saja yang mempengaruhi biaya premi yang harus dibayar.
+- Menentukan faktor-faktor apa saja yang mempengaruhi seseorang dapat terkena stroke.
 - Menentukan model yang bisa memprediksi paling akurat pada proyek ini.
-- Memprediksi biaya premi yang harus ditanggung seakurat mungkin.
+- Memprediksi dan mendiagnosa seseorang bisa terkena stroke.
 
 ### Solution statements
-- Solusi ini akan membandingkan prediksi hasil K nearest Neighbour, Random forest, dan boost
+- Solusi ini akan membandingkan prediksi hasil K nearest Neighbour, Random forest, dan support vector machine 
 
 
 ## Data Understanding
 Data ini berisi 1338 anggota asuransi dari berbagai wilayah dan usia. Data ini memiliki beberapa fitur antara lain:
-- age : Usia anggota;
-- sex : Jenis kelamin;
+- id : number uniq pasien
+- age : Usia anggota pasien
+- gender : Jenis kelamin pasien
+- hypertension : tekanan darah pasien
+- heart_disease : penyakt jantung
+- ever_married : staus pasien
+- work_type : jenis pekerjaan pasien
+- residence_type : jenis rumah pasien
+- avg_glucose_level : tingkat glukosa pasien
 - bmi : Body mass index. Perbandingan berat badan anggota dalam kg dan pangkat dua dari tinggi badan anggota dalam meter;
-- children : Jumlah anak yang dimiliki; 
-- smoker : Kebiasaan merokok dari anggota asuransi;
-- Region : Domisili anggota;
-- charges : Beban premi yang harus dibayarkan.
+- smoking_status :kondisi seorang pasien dalam hal kebiasaan merokok tembakau
+- stroke : kondisi seseoorang dikatakan stroke atau tidak dengan di gantikan oleh ( 1 jika kondisi stroke, 0 jika tidak)
 
 ## Data Preparation
 Preparasi data dilakukan dengan tahapan sebagai berikut:
 - menghapus data-data outliers 
-  Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier adalah data angka BMI yang berlebihan.
+  Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier adalah data angka BMI dan avg_glucose_level yang berlebihan.
   ![outlier1](https://user-images.githubusercontent.com/106704301/185286463-05ba9db6-7bd7-4a09-b31f-9e0a627943ed.png)
 ![outlier 2](https://user-images.githubusercontent.com/106704301/185286476-f2c216a4-7923-4ed5-abd7-52fdd27f4ddf.png)
 - melihat kondisi data sampel
