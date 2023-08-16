@@ -43,7 +43,7 @@ Tujuan dari proyek ini antara lain:
 - Memprediksi dan mendiagnosa seseorang bisa terkena stroke.
 
 ### Solution statements
-- Solusi ini akan membandingkan prediksi hasil K nearest Neighbour, Random forest, dan support vector machine 
+- Solusi ini akan membandingkan akurasi dari algortima K nearest Neighbour, Random forest, dan support vector machine 
 
 
 ## Data Understanding
@@ -68,42 +68,41 @@ Preparasi data dilakukan dengan tahapan sebagai berikut:
   ![outlier](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/outlier_age_bmi_glukosa.png)
 - melihat kondisi data sampel
 
-![jenis kelamin](https://user-images.githubusercontent.com/106704301/185286627-ddba4e62-7d94-4bc9-8642-55db5c490a04.png)
-![perokok](https://user-images.githubusercontent.com/106704301/185286634-bc6fe4db-ec48-4011-859e-4912db5d9177.png)
-![domisili](https://user-images.githubusercontent.com/106704301/185286649-2f4e9064-c283-4b25-b39b-9d6a10a68847.png)
-![data1](https://user-images.githubusercontent.com/106704301/185286658-d86159d2-1b73-4321-8b8d-ec3bed4e6a3d.png)
-![data2](https://user-images.githubusercontent.com/106704301/185286664-a749ffca-0fe1-45aa-aaee-e37b83df29cd.png)
+![gender](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download.png)
+![smoking_status](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20lagi.png)
+![ever_maried](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20(1).png)
+![residence_type](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20(2)%5B.png)
+![work_type](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20work.png)
 
-- membuang fitur yang sama sekali tidak berkorelasi dengan fitur-fitur lainnya 
-Dalam hal ini, faktor jumlah anak tidak berkorelasi pada fitur fitur apapun, sehingga fitur "children" bisa dihapus.
-![proyek 1d](https://user-images.githubusercontent.com/106704301/185286823-394aab8c-4005-4edf-b07e-cb9d5d667120.png)
-
-- menggabungkan usia dan bmi menjadi fitur baru bernama "Faktor kesehatan"
-- melakukan standarisasi untuk mempermudah perhitungan.
-![standarisasi](https://user-images.githubusercontent.com/106704301/185287071-deaa77b6-8754-473c-9c07-6a0d402e23a4.png)
-
-Dari proses ini diketahui bahwa:
-- Pada gambar di bawah bisa diketahui bahwa jenis kelamin hampir tidak mempengaruhi biaya premi dimana rerata biaya premi untuk wanita hampir sama dengan pria.
-![proyek 1a](https://user-images.githubusercontent.com/106704301/185205315-81c19e62-a6ad-47b2-9ee0-bd9c8fa01361.png)
-- Pada gambar di bawah bisa diketahui bahwa kebiasaan merokok sangat mempengaruhi biaya premi yang dibebankan dimana rerata biaya premi yang dibebankan kepada anggota yang perokok aktif 3 kali lebih besar daripada kepada anggota yang tidak merokok.
-![proyek 1b](https://user-images.githubusercontent.com/106704301/185205721-c58ca518-8532-4e7e-a384-0f206f049444.png)
-- Pada gambar di bawah ini bisa diketahui bahwa daerah domisili anggota juga mempengaruhi besarnya biaya premi yang dibebankan dimana northeast menjadi wilayah yang dikenai rata-rata premi termahal dan southwest menjadi wilayah yang dikenai rata-rata premi termurah.
-![proyek 1c](https://user-images.githubusercontent.com/106704301/185206543-7cf45196-d881-44ca-8731-273d577575cf.png)
-- Dari gambar di bawah bisa diketahui bahwa umur sedikit mempengaruhi BMI dan cukup mempengaruhi biaya premi. BMI sendiri memang tidak mempengaruhi biaya premi, akan tetapi besarnya BMI anggota sedikit dipengaruhi oleh umur anggota. Satu-satunya faktor yang tidak berkorelasi pada faktor apapun adalah jumlah anak. Maka dari itu, fitur "children" bisa dihapus.
-![proyek 1d](https://user-images.githubusercontent.com/106704301/185207129-4b0f7832-f308-47be-a609-635f01bfd041.png)
-
+- melihat jumlah orang yang mengalami stroke dari semua fator
+![plot_stroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/downloadstroke.png)
+- mengobservasi korelasi antara fitur numerik dengan fitur target
+![pairplot](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/pairplot.png)
+bisa kita liat secara visual mengenai korelasi semua feature numerik terhadap target
+-korelasi semua fitur numerik dengan correlation matrix
+![correlationmat](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/corrmatrik.png)
+- melihat distribusi umur terhadap stroke
+  ![agestroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/dist_agestrok.png)
+- melihat distribusi bmi terhadapt stroke
+   ![bmistroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/dist_bmi_strok.png)
+- melihat distribusi data 0 1 di dalam data taget stroke itu sendiri
+- ![strokestroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140159.png)
+Setelah kita lihat beberapa persebaran target dan bmi terhadap target stroke kurang terdistribusi dengan baik begitupun ketika kita melihat pesebaran data stroke sendiri terjadi imbalance, seperti berikut : 
+![imbalancestroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140205.png)
+agar data menjadi balance kita perlu melakukan resample data seperti code di bawah ini :
+![fiximbalance](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140226.png)
+setelah kita melalukan resample, maka data akan menjadi balance seperti gambar di bawah berikut :
+![fiximbalance](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140236.png)
 ## Modeling
-- Modeling proyek ini dilakukan dengan 3 metode yang akan dibandingkan satu sama lain antara lain KNN, random forest, dan boosting. Parameter K pada KNN yang digunakan adalah sebesar 3, lalu parameter RF yang digunakan adalah pohonnya sebanyak 100 dan kedalaman sebesar 25, dan untuk boosting learning ratenya sebesar 0.001.
-- Pada proyek ini, MSE terkecil dicetak oleh boosting, lalu disusul oleh RF, dan MSE terbesar adalah model KNN.
-![MSE](https://user-images.githubusercontent.com/106704301/185289185-e0ffa27f-ffa4-4091-baec-79d88ef1b648.png)
-- Sedangkan untuk hasil prediksi, nilai terdekat dari nilai sesungguhnya (2523.1695) adalah dari KNN sebesar 3364.44, disusul oleh RF sebesar 4170, dan yang paling jauh dari nilai sesungguhnya adalah boosting sebesar 4384.3
-
-![prediksi](https://user-images.githubusercontent.com/106704301/185289208-bedcb92e-50e1-4ba2-9219-4f410685a308.png)
-- Dalam proyek ini, saya akan menggunakan KNN karena hasil prediksinya paling mendekati nilai sesungguhnya.
+- Modeling proyek ini dilakukan dengan 3 metode yang akan dibandingkan satu sama lain antara lain KNN, random forest, dan SVM. Parameter K pada KNN yang digunakan adalah sebesar 3, lalu parameter RF yang digunakan adalah seperti n_estimators=150,criterion='entropy',random_state = 123 dan untuk SVM kita biarkan secara defualt saja.
+- Pada proyek ini, MSE terkecil dicetak oleh RF, lalu disusul oleh KNN, dan MSE terbesar adalah model SVM.
+![MSE](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/mse.png)
+- berikut hasil akurasinya : 
+![accu](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20134228.png)
+Dalam proyek ini, saya akan menggunakan RF karena hasil prediksinya paling mendekati nilai sesungguhnya.
 
 ## Evaluation
-- Evaluasi pada proyek ini adalah tingkat ketelitiannya yang masih kecil dimana hasil yang paling mendekati hasil aslinya memiliki perbedaan/error sebesar 33.34% dari nilai aslinya.
-- Dibutuhkan optimalisasi lebih lanjut utamanya pada random forest dan boosting agar bisa mendapatkan hasil prediksi yang lebih mendekati hasil aslinya.
+- Dibutuhkan optimalisasi lebih lanjut utamanya pada KNN dan SVM agar bisa mendapatkan hasil prediksi yang lebih mendekati hasil aslinya.
 
 **---Ini adalah bagian akhir laporan---**
 
