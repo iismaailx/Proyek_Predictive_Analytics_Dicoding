@@ -97,9 +97,12 @@ setelah kita melalukan resample, maka data akan menjadi balance seperti gambar d
 - Modeling proyek ini dilakukan dengan 3 metode yang akan dibandingkan satu sama lain antara lain KNN, random forest, dan SVM. Parameter K pada KNN yang digunakan adalah sebesar 3, lalu parameter RF yang digunakan adalah seperti n_estimators=150,criterion='entropy',random_state = 123 dan untuk SVM kita biarkan secara defualt saja.
 - Pada proyek ini, MSE terkecil dicetak oleh RF, lalu disusul oleh KNN, dan MSE terbesar adalah model SVM.
 ![MSE](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/mse.png)
-- berikut hasil akurasinya : 
+- berikut hasil akurasinya :
+  
 | Model 	| KKN      	| RF      	| SVM      	|
+
 |-------	|----------	|---------	|----------	|
+
 | ACC   	| 0.975336 	| 0.99701 	| 0.908819 	|
 
 Dalam proyek ini, saya akan menggunakan RF karena nilai akurasinya jauh lebih tinggi.
