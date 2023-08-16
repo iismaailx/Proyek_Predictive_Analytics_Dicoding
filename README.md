@@ -5,7 +5,7 @@
 
 Stroke adalah kondisi medis yang serius terjadi ketika aliran darah ke bagian otak terganggu atau terhenti. Hal ini menyebabkan sel-sel otak mengalami kematian dalam periode singkat akibat kekurangan oksigen dan nutrisi. Kondisi ini dapat disebabkan oleh pembuluh darah otak yang tersumbat oleh gumpalan darah, mengakibatkan stroke iskemik, atau oleh pecahnya pembuluh darah yang menyebabkan perdarahan di otak, dikenal sebagai stroke hemoragik. Dalam proyek Machine Learning untuk diagnosis penyakit stroke, kami bertujuan untuk mengembangkan dan meningkatkan kemampuan klasifikasi untuk mengidentifikasi dan memprediksi risiko terjadinya stroke pada individu berdasarkan data medis dan faktor risiko yang relevan.
 
-## Gejala Stroke:
+### Gejala Stroke:
 Gejala stroke dapat bervariasi tergantung pada bagian otak yang terpengaruh. Beberapa gejala umum yang mungkin terjadi adalah:
 1. Kelumpuhan atau Kelemahan: Terjadi pada salah satu sisi tubuh, misalnya, lengan atau kaki.
 2. Gangguan Berbicara dan Memahami: Kesulitan berbicara, mencari kata, atau memahami percakapan.
@@ -14,7 +14,7 @@ Gejala stroke dapat bervariasi tergantung pada bagian otak yang terpengaruh. Beb
 5. Pusing, Hilang Keseimbangan: Rasa pusing yang parah atau hilangnya keseimbangan.
 6. Sakit Kepala Parah: Kadang-kadang disertai dengan muntah atau perubahan kesadaran.
 7. Kelumpuhan Wajah: Salah satu sisi wajah mungkin turun atau terasa kesemutan.
-## Faktor Risiko:
+### Faktor Risiko:
 Beberapa faktor yang dapat meningkatkan risiko stroke meliputi:
 1. Hipertensi (Tekanan Darah Tinggi): Tekanan darah tinggi dapat merusak pembuluh darah dan meningkatkan risiko penyumbatan atau pecahnya pembuluh darah otak.
 2. Merokok: Merokok dapat merusak pembuluh darah dan meningkatkan risiko pembentukan gumpalan darah.
@@ -47,19 +47,21 @@ Tujuan dari proyek ini antara lain:
 
 
 ## Data Understanding
-Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usia serta dengan kebisaan meroko. Data ini memiliki beberapa fitur antara lain:
-- id : number uniq pasien
-- age : Usia anggota pasien
-- gender : Jenis kelamin pasien
-- hypertension : tekanan darah pasien
-- heart_disease : penyakt jantung
-- ever_married : staus pasien
-- work_type : jenis pekerjaan pasien
-- residence_type : jenis rumah pasien
-- avg_glucose_level : tingkat glukosa pasien
-- bmi : Body mass index. Perbandingan berat badan anggota dalam kg dan pangkat dua dari tinggi badan anggota dalam meter;
-- smoking_status :kondisi seorang pasien dalam hal kebiasaan merokok tembakau
-- stroke : kondisi seseoorang dikatakan stroke atau tidak dengan di gantikan oleh ( 1 jika kondisi stroke, 0 jika tidak)
+Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usia serta dengan kebisaan meroko. Data ini memiliki beberapa Attribute antara lain sebagai berikut :
+| Attribute 	| Keterangan 	|
+|---	|---	|
+| id 	| Number unix pasien 	|
+| Age 	| Umur pasien 	|
+| Gender 	| Jenis kelamin pasien 	|
+| Hypertension 	| Tekanan darah pasien 	|
+| Heart_disease 	| Penyakit jantung 	|
+| Ever_married 	| Status pernikahan pasien 	|
+| Work_type 	| Jenis pekerjaan pasien 	|
+| Residence_type 	| Jenis rumah pasien 	|
+| Avg_glucose_level 	| Tingkat glukosa pasien 	|
+| BMI 	| Body mass index. Perbandingan berat badan anggota dalam kg dan pangkat dua dari tinggi badan anggota dalam meter 	|
+| Smoking_status 	| kondisi seorang pasien dalam hal kebiasaan merokok tembakau 	|
+| Stroke 	| Kondisi seseoorang dikatakan stroke atau tidak dengan di gantikan oleh ( 1 jika kondisi stroke, 0 jika tidak) 	|
 
 ## Data Preparation
 Preparasi data dilakukan dengan tahapan sebagai berikut:
