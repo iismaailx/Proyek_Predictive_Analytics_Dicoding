@@ -70,40 +70,20 @@ Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usi
 ## Data Preparation
 Preparasi data dilakukan dengan tahapan sebagai berikut:
 - menghapus data-data outliers 
-  Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier adalah data angka BMI dan avg_glucose_level yang berlebihan.
-  ![outlier](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/outlier_age_bmi_glukosa.png)
+  Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier 
+  adalah data angka BMI dan avg_glucose_level yang berlebihan.
 - melihat kondisi data sampel
-
-![gender](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download.png)
-![smoking_status](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20lagi.png)
-![ever_maried](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20(1).png)
-![residence_type](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20(2)%5B.png)
-![work_type](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/download%20work.png)
-
-- melihat jumlah orang yang mengalami stroke dari semua fator
-![plot_stroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/downloadstroke.png)
+- melihat jumlah orang yang mengalami stroke dari semua faktor
 - mengobservasi korelasi antara fitur numerik dengan fitur target
-![pairplot](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/pairplot.png)
-bisa kita liat secara visual mengenai korelasi semua feature numerik terhadap target
--korelasi semua fitur numerik dengan correlation matrix
-![correlationmat](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/corrmatrik.png)
+- korelasi semua fitur numerik dengan correlation matrix
 - melihat distribusi umur terhadap stroke
-  ![agestroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/dist_agestrok.png)
-- melihat distribusi bmi terhadapt stroke
-   ![bmistroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/dist_bmi_strok.png)
+- melihat distribusi BMI terhadapt stroke
 - melihat distribusi data 0 1 di dalam data taget stroke itu sendiri
-- ![strokestroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140159.png)
-Setelah kita lihat beberapa persebaran target dan bmi terhadap target stroke kurang terdistribusi dengan baik begitupun ketika kita melihat pesebaran data stroke sendiri terjadi imbalance, seperti berikut : 
-![imbalancestroke](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140205.png)
-agar data menjadi balance kita perlu melakukan resample data seperti code di bawah ini :
-![fiximbalance](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140226.png)
-setelah kita melalukan resample, maka data akan menjadi balance seperti gambar di bawah berikut :
-![fiximbalance](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/Screenshot%202023-08-16%20140236.png)
+Setelah melihat beberapa persebaran target dan bmi terhadap target stroke kurang terdistribusi dengan baik begitupun ketika kita melihat persebaran data stroke sendiri terjadi imbalance. 
+
 ## Modeling
 - Modeling proyek ini dilakukan dengan 3 metode yang akan dibandingkan satu sama lain antara lain KNN, random forest, dan SVM. Parameter K pada KNN yang digunakan adalah sebesar 3, lalu parameter RF yang digunakan adalah seperti n_estimators=150,criterion='entropy',random_state = 123 dan untuk SVM kita biarkan secara defualt saja.
 - Pada proyek ini, MSE terkecil dicetak oleh RF, lalu disusul oleh KNN, dan MSE terbesar adalah model SVM.
-![MSE](https://github.com/iismaailx/Proyek_Predictive_Analytics_Dicoding/blob/main/Gambar/mse.png)
-- berikut hasil akurasinya :
   
 | Model 	| KKN 	| RF 	| SVM 	|
 |---	|---	|---	|---	|
