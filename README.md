@@ -71,7 +71,7 @@ Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usi
 Preparasi data dilakukan dengan tahapan sebagai berikut:
 - Gunakan method describe untuk menghasilkan ringkasan statistik dari kolom-kolom dalam DataFrame. Ini memberikan informasi statistik penting seperti rata-rata, standar deviasi, nilai minimum, kuartil, dan lain-lain tentang data dalam kolom-kolom DataFrame.
 - 
- |**id**|**age**|**hypertension**|**heart\_disease**|**avg\_glucose\_level**|**bmi**|**stroke**
+|**id**|**age**|**hypertension**|**heart\_disease**|**avg\_glucose\_level**|**bmi**|**stroke**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 count|5110.000000|5110.000000|5110.000000|5110.000000|5110.000000|4909.000000|5110.000000
 mean|36517.829354|43.226614|0.097456|0.054012|106.147677|28.893237|0.048728
