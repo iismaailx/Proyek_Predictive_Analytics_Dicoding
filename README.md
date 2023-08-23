@@ -120,6 +120,7 @@ min|67.000000|0.080000|0.000000|0.000000|55.120000|10.300000|0.000000
 75%|54682.000000|61.000000|0.000000|0.000000|114.090000|33.100000|0.000000
 max|72940.000000|82.000000|1.000000|1.000000|271.740000|97.600000|1.000000
 
+
 -Fungsi info() pada pandas digunakan untuk mendapatkan informasi rinci tentang DataFrame, termasuk tipe data kolom, jumlah entri non-null, penggunaan memori, dan lain-lain.
 
 
