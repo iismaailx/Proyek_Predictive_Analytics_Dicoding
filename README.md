@@ -71,55 +71,16 @@ Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usi
 Preparasi data dilakukan dengan tahapan sebagai berikut:
 - Gunakan method describe untuk menghasilkan ringkasan statistik dari kolom-kolom dalam DataFrame. Ini memberikan informasi statistik penting seperti rata-rata, standar deviasi, nilai minimum, kuartil, dan lain-lain tentang data dalam kolom-kolom DataFrame.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- |**id**|**age**|**hypertension**|**heart\_disease**|**avg\_glucose\_level**|**bmi**|**stroke**
+**index**|**id**|**age**|**hypertension**|**heart\_disease**|**avg\_glucose\_level**|**bmi**|**stroke**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
-count|5110.000000|5110.000000|5110.000000|5110.000000|5110.000000|4909.000000|5110.000000
-mean|36517.829354|43.226614|0.097456|0.054012|106.147677|28.893237|0.048728
-std|21161.721625|22.612647|0.296607|0.226063|45.283560|7.854067|0.215320
-min|67.000000|0.080000|0.000000|0.000000|55.120000|10.300000|0.000000
-25%|17741.250000|25.000000|0.000000|0.000000|77.245000|23.500000|0.000000
-50%|36932.000000|45.000000|0.000000|0.000000|91.885000|28.100000|0.000000
-75%|54682.000000|61.000000|0.000000|0.000000|114.090000|33.100000|0.000000
-max|72940.000000|82.000000|1.000000|1.000000|271.740000|97.600000|1.000000
-
+count|5110.0|5110.0|5110.0|5110.0|5110.0|4909.0|5110.0
+mean|36517.82935420744|43.226614481409|0.0974559686888454|0.05401174168297456|106.1476771037182|28.893236911794666|0.0487279843444227
+std|21161.721624827165|22.61264672311349|0.29660667423379117|0.22606298750336543|45.28356015058198|7.854066729680164|0.2153198569802376
+min|67.0|0.08|0.0|0.0|55.12|10.3|0.0
+25%|17741.25|25.0|0.0|0.0|77.245|23.5|0.0
+50%|36932.0|45.0|0.0|0.0|91.88499999999999|28.1|0.0
+75%|54682.0|61.0|0.0|0.0|114.09|33.1|0.0
+max|72940.0|82.0|1.0|1.0|271.74|97.6|1.0
 
 -Fungsi info() pada pandas digunakan untuk mendapatkan informasi rinci tentang DataFrame, termasuk tipe data kolom, jumlah entri non-null, penggunaan memori, dan lain-lain.
 
