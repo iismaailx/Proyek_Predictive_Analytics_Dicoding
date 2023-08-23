@@ -69,16 +69,20 @@ Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usi
 
 ## Data Preparation
 Preparasi data dilakukan dengan tahapan sebagai berikut:
-|index|id|age|hypertension|heart\_disease|avg\_glucose\_level|bmi|stroke|
-|---|---|---|---|---|---|---|---|
-|count|5110\.0|5110\.0|5110\.0|5110\.0|5110\.0|4909\.0|5110\.0|
-|mean|36517\.82935420744|43\.226614481409|0\.0974559686888454|0\.05401174168297456|106\.1476771037182|28\.893236911794666|0\.0487279843444227|
-|std|21161\.721624827165|22\.61264672311349|0\.29660667423379117|0\.22606298750336543|45\.28356015058198|7\.854066729680164|0\.2153198569802376|
-|min|67\.0|0\.08|0\.0|0\.0|55\.12|10\.3|0\.0|
-|25%|17741\.25|25\.0|0\.0|0\.0|77\.245|23\.5|0\.0|
-|50%|36932\.0|45\.0|0\.0|0\.0|91\.88499999999999|28\.1|0\.0|
-|75%|54682\.0|61\.0|0\.0|0\.0|114\.09|33\.1|0\.0|
-|max|72940\.0|82\.0|1\.0|1\.0|271\.74|97\.6|1\.0|
+**#**|**Column**|**Non-Null Count**|**Dtype**
+:-----:|:-----:|:-----:|:-----:
+0|id|5110 non-null|int64
+1|gender|5110 non-null|object
+2|age|5110 non-null|float64
+3|hypertension|5110 non-null|int64
+4|heart\_disease|5110 non-null|int64
+5|ever\_married|5110 non-null|object
+6|work\_type|5110 non-null|object
+7|Residence\_type|5110 non-null|object
+8|avg\_glucose\_level|5110 non-null|float64
+9|bmi|4909 non-null|float64
+10|smoking\_status|5110 non-null|object
+11|stroke|5110 non-null|int64
 - menghapus data-data outliers 
   Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier 
   adalah data angka BMI dan avg_glucose_level yang berlebihan.
