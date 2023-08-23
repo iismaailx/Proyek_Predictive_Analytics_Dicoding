@@ -127,7 +127,7 @@ max|72940.0|82.0|1.0|1.0|271.74|97.6|1.0
 - Menghapus data yang null menggunakan kode berikut :
 - fgrfgrg
 - Membuat fungsi untuk menghandle data-data outliers
-  ```python
+```python
 def handling_outliers(data, column):
     Q1 = stroke_df[column].quantile(.25)
     Q3 = stroke_df[column].quantile(.75)
@@ -136,6 +136,11 @@ def handling_outliers(data, column):
     upper_bound = Q1 + (1.5*IQR)
     result = stroke_df.index[(stroke_df[column]< lower_bound) | (stroke_df[column] > upper_bound)]
     return result
+```
+```
+print("Hello, world!")
+for i in range(10):
+    print(i)
 ```
   Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier 
   adalah data angka BMI dan avg_glucose_level yang berlebihan.
