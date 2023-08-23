@@ -111,35 +111,35 @@ max|72940.0|82.0|1.0|1.0|271.74|97.6|1.0
 |Female|79.0|1|0|Yes|Self-employed|Rural|174.12|24.0|never smoked
 
 -Mengecek data yang kosong atau bernilai null pada dataset
-gender|0
-::|::
-age|0
-hypertension|0
-heart\_disease|0
-ever\_married|0
-work\_type|0
-Residence\_type|0
-avg\_glucose\_level|0
-bmi|201
-smoking\_status|0
-stroke|0
-- Menghapus data yang kosong atau null
-  gender|0
-::|::
-age|0
-hypertension|0
-heart\_disease|0
-ever\_married|0
-work\_type|0
-Residence\_type|0
-avg\_glucose\_level|0
-bmi|0
-smoking\_status|0
-stroke|0
-
-- menghapus data-data outliers 
+**#**|**Column**|**Non-Null Count**|**Dtype**
+:-----:|:-----:|:-----:|:-----:
+0|gender|4909 non-null|object
+1|age|4909 non-null|float64
+2|hypertension|4909 non-null|int64
+3|heart\_disease|4909 non-null|int64
+4|ever\_married|4909 non-null|object
+5|work\_type|4909 non-null|object
+6|Residence\_type|4909 non-null|object
+7|avg\_glucose\_level|4909 non-null|float64
+8|bmi|4909 non-null|float64
+9|smoking\_status|4909 non-null|object
+10|stroke|4909 non-null|int64
+- Menghapus data yang null menggunakan kode berikut :
+- fgrfgrg
+- Membuat fungsi untuk menghandle data-data outliers
+  ```python
+def handling_outliers(data, column):
+    Q1 = stroke_df[column].quantile(.25)
+    Q3 = stroke_df[column].quantile(.75)
+    IQR = Q3 - Q1
+    lower_bound = Q1 - (1.5*IQR)
+    upper_bound = Q1 + (1.5*IQR)
+    result = stroke_df.index[(stroke_df[column]< lower_bound) | (stroke_df[column] > upper_bound)]
+    return result
+```
   Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier 
   adalah data angka BMI dan avg_glucose_level yang berlebihan.
+  
 - melihat kondisi data sampel
 - melihat jumlah orang yang mengalami stroke dari semua faktor
 - mengobservasi korelasi antara fitur numerik dengan fitur target
