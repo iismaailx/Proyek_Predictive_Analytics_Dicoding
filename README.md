@@ -70,6 +70,7 @@ Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usi
 ## Data Preparation
 Preparasi data dilakukan dengan tahapan sebagai berikut:
 - Gunakan method describe untuk menghasilkan ringkasan statistik dari kolom-kolom dalam DataFrame. Ini memberikan informasi statistik penting seperti rata-rata, standar deviasi, nilai minimum, kuartil, dan lain-lain tentang data dalam kolom-kolom DataFrame.
+  
 
  |**id**|**age**|**hypertension**|**heart\_disease**|**avg\_glucose\_level**|**bmi**|**stroke**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
@@ -81,7 +82,9 @@ min|67.000000|0.080000|0.000000|0.000000|55.120000|10.300000|0.000000
 50%|36932.000000|45.000000|0.000000|0.000000|91.885000|28.100000|0.000000
 75%|54682.000000|61.000000|0.000000|0.000000|114.090000|33.100000|0.000000
 max|72940.000000|82.000000|1.000000|1.000000|271.740000|97.600000|1.000000
+
 -Fungsi info() pada pandas digunakan untuk mendapatkan informasi rinci tentang DataFrame, termasuk tipe data kolom, jumlah entri non-null, penggunaan memori, dan lain-lain.
+
 
 **#**|**Column**|**Non-Null Count**|**Dtype**
 :-----:|:-----:|:-----:|:-----:
@@ -98,7 +101,9 @@ max|72940.000000|82.000000|1.000000|1.000000|271.740000|97.600000|1.000000
 10|smoking\_status|5110 non-null|object
 11|stroke|5110 non-null|int64
 - Menghapus kolom yang tidak di butuhkan seperti kolom id
-  **gender**|**age**|**hypertension**|**heart\_disease**|**ever\_married**|**work\_type**|**Residence\_type**|**avg\_glucose\_level**|**BMI**|**smoking\_status**|**stroke**
+
+
+**gender**|**age**|**hypertension**|**heart\_disease**|**ever\_married**|**work\_type**|**Residence\_type**|**avg\_glucose\_level**|**BMI**|**smoking\_status**|**stroke**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 0|Male|67.0|0|1|Yes|Private|Urban|228.69|36.6|formerly smoked
 1|Female|61.0|0|0|Yes|Self-employed|Rural|202.21|NaN|never smoked
