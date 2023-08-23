@@ -125,7 +125,25 @@ max|72940.0|82.0|1.0|1.0|271.74|97.6|1.0
 9|smoking\_status|4909 non-null|object
 10|stroke|4909 non-null|int64
 - Menghapus data yang null menggunakan kode berikut :
-- fgrfgrg
+```
+stroke_df.dropna(inplace=True)
+stroke_df.isna().sum()
+```
+dengan menjalankan kode berikut maka data yang null akan di hapus, lalu cek kemabli datanya
+
+| gender 	|  	|
+|---	|---	|
+| age 	|  	|
+| hypertension 	|  	|
+| heart_disease 	|  	|
+| ever_married 	|  	|
+| work_type 	|  	|
+| Residence_type 	|  	|
+| avg_glucose_level 	|  	|
+| bmi 	|  	|
+| smoking_status 	|  	|
+| stroke 	|  	|
+
 - Membuat fungsi untuk menghandle data-data outliers
 ```python
 def handling_outliers(data, column):
@@ -136,12 +154,14 @@ def handling_outliers(data, column):
     upper_bound = Q1 + (1.5*IQR)
     result = stroke_df.index[(stroke_df[column]< lower_bound) | (stroke_df[column] > upper_bound)]
     return result
+data_columns = ['age', 'bmi', 'avg_glucose_level']
+index_list = []
+for column in data_columns:
+    index_list.extend(handling_outliers(stroke_df, column))
+
+index_list = sorted(set(index_list))
 ```
-```
-print("Hello, world!")
-for i in range(10):
-    print(i)
-```
+
   Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier 
   adalah data angka BMI dan avg_glucose_level yang berlebihan.
   
