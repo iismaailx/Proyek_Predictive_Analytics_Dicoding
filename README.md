@@ -104,11 +104,11 @@ max|72940.0|82.0|1.0|1.0|271.74|97.6|1.0
 
 **gender**|**age**|**hypertension**|**heart\_disease**|**ever\_married**|**work\_type**|**Residence\_type**|**avg\_glucose\_level**|**BMI**|**smoking\_status**|**stroke**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
-0|Male|67.0|0|1|Yes|Private|Urban|228.69|36.6|formerly smoked
-1|Female|61.0|0|0|Yes|Self-employed|Rural|202.21|NaN|never smoked
-2|Male|80.0|0|1|Yes|Private|Rural|105.92|32.5|never smoked
-3|Female|49.0|0|0|Yes|Private|Urban|171.23|34.4|smokes
-4|Female|79.0|1|0|Yes|Self-employed|Rural|174.12|24.0|never smoked
+|Male|67.0|0|1|Yes|Private|Urban|228.69|36.6|formerly smoked
+|Female|61.0|0|0|Yes|Self-employed|Rural|202.21|NaN|never smoked
+|Male|80.0|0|1|Yes|Private|Rural|105.92|32.5|never smoked
+|Female|49.0|0|0|Yes|Private|Urban|171.23|34.4|smokes
+|Female|79.0|1|0|Yes|Self-employed|Rural|174.12|24.0|never smoked
 
 -Mengecek data yang kosong atau bernilai null pada dataset
 gender|0
