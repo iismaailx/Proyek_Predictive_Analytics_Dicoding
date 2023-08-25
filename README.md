@@ -2,8 +2,15 @@
 # Laporan Proyek Machine Learning Classification untuk Diagnosis Penyakit Stroke - Iis Ismail
 
 ## Domain Proyek
+Stroke adalah salah satu penyakit yang memiliki dampak signifikan terhadap kesehatan masyarakat dan tingkat kematian yang tinggi di seluruh dunia. Menurut Organisasi Kesehatan Dunia (WHO), stroke merupakan penyebab kematian nomor dua di dunia, dengan lebih dari 11 juta orang mengalami stroke setiap tahunnya. Di samping angka kematian, banyak penderita stroke yang mengalami cacat jangka panjang, seperti gangguan berbicara, gerakan terbatas, dan masalah kognitif.
+Penyebab stroke dapat beragam, tetapi sebagian besar terjadi akibat pembuluh darah yang menyuplai darah ke otak tersumbat oleh gumpalan darah atau pecahnya pembuluh darah. Stroke iskemik (akibat penyumbatan pembuluh darah) dan stroke hemoragik (akibat pecahnya pembuluh darah) adalah dua jenis utama stroke. Deteksi dan diagnosa dini terkait risiko stroke menjadi sangat penting, karena tindakan pencegahan yang tepat waktu dapat mengurangi dampak yang ditimbulkan.
+Dalam upaya untuk meningkatkan deteksi dini dan diagnosis risiko stroke, penggunaan teknologi Machine Learning (ML) telah menjadi area penelitian yang semakin menarik. Dengan memanfaatkan data medis dan faktor risiko yang relevan, seperti riwayat medis, usia, tekanan darah, kadar gula darah, dan faktor gaya hidup, model ML dapat mengklasifikasikan individu berdasarkan risiko mereka mengalami stroke. Proyek ini bertujuan untuk mengembangkan dan meningkatkan kemampuan model klasifikasi untuk mengidentifikasi dan memprediksi risiko terjadinya stroke pada individu.
+Penggunaan ML dalam diagnosis penyakit stroke dapat membantu tenaga medis dalam memberikan tindakan pencegahan yang lebih efektif dan personal pada individu yang berisiko. Dengan mengidentifikasi faktor risiko yang berkaitan dengan stroke, model ML dapat memberikan informasi yang lebih baik dalam membuat keputusan klinis dan mengarahkan perawatan pasien.
 
-Stroke adalah kondisi medis yang serius terjadi ketika aliran darah ke bagian otak terganggu atau terhenti. Hal ini menyebabkan sel-sel otak mengalami kematian dalam periode singkat akibat kekurangan oksigen dan nutrisi. Kondisi ini dapat disebabkan oleh pembuluh darah otak yang tersumbat oleh gumpalan darah, mengakibatkan stroke iskemik, atau oleh pecahnya pembuluh darah yang menyebabkan perdarahan di otak, dikenal sebagai stroke hemoragik. Dalam proyek Machine Learning untuk diagnosis penyakit stroke, kami bertujuan untuk mengembangkan dan meningkatkan kemampuan klasifikasi untuk mengidentifikasi dan memprediksi risiko terjadinya stroke pada individu berdasarkan data medis dan faktor risiko yang relevan.
+Referensi:
+1. World Health Organization (WHO). (2021). The top 10 causes of death. [https://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death]
+2. Benjamin, E. J., Muntner, P., Alonso, A., Bittencourt, M. S., Callaway, C. W., Carson, A. P., ... & Virani, S. S. (2019). Heart disease and stroke statistics—2019 update: a report from the American Heart Association. Circulation, 139(10), e56-e528.
+3. Nannoni, S., Del Bene, A., Palumbo, V., Petrone, L., Nesi, M., Pescini, F., ... & Inzitari, D. (2018). Impact of atrial fibrillation on the decision-making process in acute ischemic stroke: insights into “real-world” clinical practice from the Italian ACute Stroke Registry. Journal of the Neurological Sciences, 387, 115-121.
 
 ### Gejala Stroke:
 Gejala stroke dapat bervariasi tergantung pada bagian otak yang terpengaruh. Beberapa gejala umum yang mungkin terjadi adalah:
@@ -33,22 +40,31 @@ Dataset yang digunakan pada proyek ini didapatkan dari link di bawah ini:
 
 ### Problem Statements
 
-Masalah pada proyek ini antara lain:
-- Apa saja faktor-faktor apa saja yang dappat mengakibatkan seseorang terkena stroke?
-- Apa model yang paling akurat pada kasus proyek ini?
-- Berapa error yang akan terjadi pada hasil prediksi model terakurat pada kasus proyek ini?
+Dalam konteks proyek ini, terdapat tantangan yang berkaitan dengan pengembangan model Machine Learning untuk prediksi risiko stroke berdasarkan data medis dan faktor risiko. Beberapa masalah yang muncul antara lain:
 
+1. Identifikasi Faktor Risiko Stroke:
+Diperlukan pendekatan yang mampu mengidentifikasi faktor-faktor yang signifikan dalam meningkatkan risiko terjadinya stroke pada individu. Bagaimana cara menggabungkan dan menganalisis data medis serta informasi faktor risiko yang beragam sehingga dapat mengidentifikasi faktor-faktor utama yang berkaitan dengan stroke?
+
+2. Pemilihan Model dengan Performa Terbaik:
+Tantangan lain adalah menentukan model Machine Learning yang memiliki performa paling baik dalam mengklasifikasikan individu berdasarkan risiko stroke. Bagaimana cara memilih di antara berbagai algoritma, seperti Random Forest, Support Vector Machine, atau algoritma lainnya, agar dapat memberikan hasil prediksi yang akurat dan andal?
+
+3. Evaluasi Akurasi dan Error:
+Dalam pengembangan model prediksi risiko stroke, penting untuk mengevaluasi sejauh mana akurasi model dalam mengklasifikasikan individu yang berisiko dan tidak berisiko mengalami stroke. Bagaimana mengukur akurasi dan bagaimana memperkirakan tingkat error yang mungkin terjadi pada hasil prediksi model terbaik?
 
 ### Goals
 
-Tujuan dari proyek ini antara lain:
-- Menentukan faktor-faktor apa saja yang mempengaruhi seseorang dapat terkena stroke.
-- Menentukan model yang bisa memprediksi paling akurat pada proyek ini.
-- Memprediksi dan mendiagnosa seseorang bisa terkena stroke.
+1. Mengembangkan model Machine Learning yang mampu mengidentifikasi faktor-faktor risiko yang berkaitan dengan stroke berdasarkan data medis dan informasi faktor risiko.
+2. Menentukan model dengan performa terbaik untuk memprediksi risiko stroke pada individu.
+3. Mengukur akurasi dan memperkirakan tingkat error pada hasil prediksi model terbaik.
 
 ### Solution statements
-- Solusi ini akan membandingkan akurasi dari algortima K nearest Neighbour, Random forest, dan support vector machine 
-
+Dalam upaya mencapai tujuan proyek, berikut adalah beberapa solusi yang akan diimplementasikan:
+1. Pengembangan Model Klasifikasi:
+Pertama, akan diimplementasikan beberapa model klasifikasi seperti Random Forest, Support Vector Machine, dan algoritma lainnya. Model ini akan dilatih dengan menggunakan dataset yang mencakup data medis dan faktor risiko individu. Dengan melibatkan berbagai faktor, model dapat mengidentifikasi pola-pola yang berkaitan dengan risiko stroke.
+2. Penyetelan Hyperparameter:
+Dilakukan eksplorasi dan penyetelan hyperparameter pada model klasifikasi untuk meningkatkan performa. Penggunaan algoritma dengan konfigurasi optimal dapat menghasilkan hasil prediksi yang lebih akurat. Metrik evaluasi seperti akurasi, presisi, recall, dan F1-score akan digunakan untuk mengukur peningkatan performa model.
+3. Validasi dan Evaluasi:
+Model yang telah dikembangkan akan divalidasi menggunakan metode validasi silang dan pengujian pada data yang belum pernah dilihat sebelumnya. Hal ini akan memberikan gambaran yang lebih baik tentang seberapa baik model dapat melakukan prediksi pada situasi dunia nyata. Selain itu, akan dilakukan estimasi tingkat error melalui pengujian pada dataset uji yang berbeda.
 
 ## Data Understanding
 Data ini berisi 3419 pasien dengan riwayat riwayat penyakit yang berbeda dan usia serta dengan kebisaan meroko. Data ini memiliki beberapa Attribute antara lain sebagai berikut :
