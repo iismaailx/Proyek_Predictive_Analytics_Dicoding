@@ -147,18 +147,18 @@ stroke_df.isna().sum()
 ```
 dengan menjalankan kode berikut maka data yang null akan di hapus, lalu cek kemabli datanya
 
-| gender 	|  	|
+| gender 	| 0 	|
 |---	|---	|
-| age 	|  	|
-| hypertension 	|  	|
-| heart_disease 	|  	|
-| ever_married 	|  	|
-| work_type 	|  	|
-| Residence_type 	|  	|
-| avg_glucose_level 	|  	|
-| bmi 	|  	|
-| smoking_status 	|  	|
-| stroke 	|  	|
+| age 	|  0	|
+| hypertension 	|  	0|
+| heart_disease 	| 0 	|
+| ever_married 	|  0	|
+| work_type 	|  0	|
+| Residence_type 	|  0	|
+| avg_glucose_level 	|  0	|
+| bmi 	| 0 	|
+| smoking_status 	|  0	|
+| stroke 	|  0	|
 
 - Membuat fungsi untuk menghandle data-data outliers
 ```python
@@ -179,16 +179,42 @@ index_list = sorted(set(index_list))
 ```
 
   Dalam hal ini, akan dihapus data data outlier atau yang keluar dari trend. Pada proyek ini data outlier 
-  adalah data angka BMI dan avg_glucose_level yang berlebihan.
+  berasal dari data BMI dan avg_glucose_level yang berlebihan.
   
-- melihat kondisi data sampel
-- melihat jumlah orang yang mengalami stroke dari semua faktor
-- mengobservasi korelasi antara fitur numerik dengan fitur target
-- korelasi semua fitur numerik dengan correlation matrix
-- melihat distribusi umur terhadap stroke
-- melihat distribusi BMI terhadapt stroke
-- melihat distribusi data 0 1 di dalam data taget stroke itu sendiri
-Setelah melihat beberapa persebaran target dan bmi terhadap target stroke kurang terdistribusi dengan baik begitupun ketika kita melihat persebaran data stroke sendiri terjadi imbalance. 
+- Melihat kondisi data sampel dan shape ketika sudah dibersihkan data outliernya dengan kode berikut:
+  ```
+  shape_sebelumnya = stroke_df.shape
+  stroke_df = stroke_df.drop(index_list)
+  shape_sesudahnya = stroke_df.shape
+  print(f'Shape data sebelumnya : {shape_sebelumnya}')
+  print(f'Shape data sebelumnya : {shape_sesudahnya}')
+  ```
+  Shape yang di hasilkan sebagai berikut:
+  Shape data sebelumnya : (4909, 11)
+  Shape data sebelumnya : (3419, 11)
+- Menampilkan Visualisasi plot bar Gender untuk melihat persebaran datanya dengan kode berikut:
+  ```
+  feature = categorical_features[0]
+  count = stroke_df[feature].value_counts()
+  percent = 100*stroke_df[feature].value_counts(normalize=True)
+  df = pd.DataFrame({'Jumlah sampel': count, 'Persentase':percent.round(1)})
+  print(df)
+  count.plot(kind='bar', title=feature, color="#6EC4D4")
+```
+Menghasilkan output sebagai berikut:
+| Gender 	| Jumlah Sample 	| Persentase 	|
+|---	|---	|---	|
+| Male 	| 2007 	| 58.7 	|
+| Female 	| 1412 	| 41.3 	|
+- Selanjutnya menampilkan Visualisasi plot bar untuk melihat persebaran data feature categorical terhadapat data kolom target yaitu stroke dengan kode berikut:
+```
+plt.figure(figsize=(15, 10))
+for i in range(len(categorical_features)):
+    plt.subplot(3, 3, i+1)
+    sns.countplot(x=stroke_df[categorical_features[i]], hue = stroke_df['stroke'], palette='bone')
+```
+dikarenakan di markdown tidak bisa menampilkan gambar, maka penjelasan tahapan data preparation akan di lampirkan pada link jupyternotebook.
+[link_jupyternotebook]([URL](https://colab.research.google.com/drive/1kEiCKvvBSXgfosjfWBjLT-WDFVgOf0uc?authuser=1#scrollTo=ZTFszJx4qfYD))
 
 ## Modeling
 - Modeling proyek ini dilakukan dengan 3 metode yang akan dibandingkan satu sama lain antara lain KNN, random forest, dan SVM. Parameter K pada KNN yang digunakan adalah sebesar 3, lalu parameter RF yang digunakan adalah seperti n_estimators=150,criterion='entropy',random_state = 123 dan untuk SVM kita biarkan secara defualt saja.
