@@ -219,7 +219,7 @@ for i in range(len(categorical_features)):
 ```
 
 dikarenakan di markdown tidak bisa menampilkan gambar, maka penjelasan tahapan data preparation akan di lampirkan pada link jupyternotebook.
-[link_jupyternotebook]([URL](https://colab.research.google.com/drive/1kEiCKvvBSXgfosjfWBjLT-WDFVgOf0uc?authuser=1#scrollTo=ZTFszJx4qfYD))
+[Link_Jupyternotebook]([https://colab.research.google.com/drive/1kEiCKvvBSXgfosjfWBjLT-WDFVgOf0uc?authuser=1#scrollTo=ZTFszJx4qfYD])
 
 ## Modeling
 - Modeling proyek ini dilakukan dengan 3 metode yang akan dibandingkan satu sama lain antara lain KNN, random forest, dan SVM. Parameter K pada KNN yang digunakan adalah sebesar 3, lalu parameter RF yang digunakan adalah seperti n_estimators=150,criterion='entropy',random_state = 123 dan untuk SVM kita biarkan secara defualt saja.
